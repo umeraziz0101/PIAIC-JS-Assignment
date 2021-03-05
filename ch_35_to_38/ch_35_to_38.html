@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // Second Assignment
+
+        function capital(sentence) {
+            var mySentence = sentence.toLowerCase();
+            var words = mySentence.split(" ");
+            for (var i = 0; i < words.length; i++) {
+                words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+            }
+            return words.join(" ");
+        }
+        var sen = prompt("Please enter your course name");
+        var sent = capital(sen);
+        console.log(sent)
+
+        // Second Assignment
+
+        var a = parseInt(prompt("Please Enter any number"));
+        function factorial(num) {
+            if(num<=1) {
+                return 1;
+            } else {
+                return num*factorial(num-1);
+            }
+        }
+        console.log("Factorial of "+a+" is "+factorial(a));
+
+        // Understand this logic
+
+        var value= multiply(4,3,6); //36
+        console.log("value", value);   // ```value 36```
+        function add(a, b){
+            var z= a+b;     //z= 3+6=9
+            return z;   //return 9
+        };
+        function multiply(a, b, c){ //a=4;b=3;c=6
+            var z= a* add(b, c);    //z=4*9=36
+            return z;   //return 36
+        };
+        console.log("course", course);   // ```course undefined [because "course initialize after console.log and bydefault "course" variable only declared.]```
+        console.log("z", z);   // ```[z is not defined because z declared and initiallized in function and its scope is local. we can't access value of local variable out side of function.]```
+        var course="cloud native computing";
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

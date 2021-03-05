@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var courses = [];
+        for(i=0; i<5; i++){
+            courses[i] = prompt("Please Enter your course "+(i+1));
+        }
+        alert(courses);
+        for(j=0; j<courses.length; j++){
+            courses.splice(j,1,prompt(courses[j], courses[j]));
+            // OR
+            // courses[j] = prompt(courses[j], courses[j]);
+        }
+        alert(courses);
+    </script>
+</head>
+<body>
+</body>
+</html>

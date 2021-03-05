@@ -1,0 +1,83 @@
+<html>  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script> 
+    var userName = prompt("Please Enter Your Name");
+    var dobDate = parseInt(prompt("Please enter your DOB date"));
+    var dobMonth = parseInt(prompt("Please enter your DOB month"));
+    var dobYear = parseInt(prompt("Please enter your DOB year"));
+    var dob = new Date(dobYear+" "+dobMonth+" "+dobDate);
+    // var dob = new Date('Jan, 10, 1994');
+    var dobYear = dob.getYear();  
+    var dobMonth = dob.getMonth();  
+    var dobDate = dob.getDate();  
+    var now = new Date();  
+    // var now = new Date('Jan, 10, 2021');  
+    var ageInDays = Math.floor((now - dob) / (1000 * 60 * 60 * 24));
+    var currentYear = now.getYear();  
+    var currentMonth = now.getMonth();  
+    var currentDate = now.getDate();  
+    var hr = now.getHours();
+    if (hr >= 0 && hr < 4) {
+        console.log("Hello " + userName + ", Good Night!");
+    } else if (hr >= 4 && hr < 12) {
+        console.log("Hello " + userName + ", Good Morning!");
+    } else if (hr == 12) {
+        console.log("Hello " + userName + ", Good Noon!");
+    } else if (hr >= 1 && hr < 17) {
+        console.log("Hello " + userName + ", Good Afternoon!");
+    } else if (hr >= 17 && hr < 20) {
+        console.log("Hello " + userName + ", Good Evening!");
+    } else {
+        console.log("Hello " + userName + ", Good Night!");
+    }
+    var age = {};  
+    var ageString = "";  
+    yearAge = currentYear - dobYear;  
+    if (currentMonth >= dobMonth)  
+        var monthAge = currentMonth - dobMonth;  
+    else {  
+        yearAge--;  
+        var monthAge = 12 + currentMonth - dobMonth;  
+    }  
+    if (currentDate >= dobDate)  
+        var dateAge = currentDate - dobDate;  
+    else {  
+        monthAge--;  
+        var dateAge = 31 + currentDate - dobDate;  
+        if (monthAge < 0) {  
+            monthAge = 11;  
+            yearAge--;  
+        }  
+    }  
+    age = {  
+    years: yearAge,  
+    months: monthAge,  
+    days: dateAge  
+    };  
+    if ( (age.years > 0) && (age.months > 0) && (age.days > 0) )  
+        ageString = "You are " + age.years + " years, " + age.months + " months, and " + age.days + " days old.";  
+    else if ( (age.years == 0) && (age.months == 0) && (age.days > 0) )  
+        ageString = "You are " + "Only " + age.days + " days old!";  
+    else if ( (age.years > 0) && (age.months == 0) && (age.days == 0) )  
+        ageString = "Happy Birthday " + userName + ". Today is Your " + age.years +  "th Birthday.";  
+    else if ( (age.years > 0) && (age.months > 0) && (age.days == 0) )  
+        ageString = "You are " + age.years + " years and " + age.months + " months old.";  
+    else if ( (age.years == 0) && (age.months > 0) && (age.days > 0) )  
+        ageString = "You are " + age.months + " months and " + age.days + " days old.";  
+    else if ( (age.years > 0) && (age.months == 0) && (age.days > 0) )  
+        ageString = "You are " + age.years + " years, and " + age.days + " days old.";  
+    else if ( (age.years == 0) && (age.months > 0) && (age.days == 0) )  
+        ageString = "You are " + age.months + " months old.";  
+    else ageString = "Welcome to Earth! It's first day on Earth!";   
+    console.log("Your DOB is "+dob);
+    console.log(ageString);  
+    console.log("Your Age in Days "+ageInDays);
+</script>  
+</head>  
+<body>  
+
+</body>  
+</html>  

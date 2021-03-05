@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var courses = [];
+        var course_1 = prompt("Please enter your course 1");
+        var course_2 = prompt("Please enter your course 2");
+        var course_3 = prompt("Please enter your course 3");
+        var course_4 = prompt("Please enter your course 4");
+        var course_5 = prompt("Please enter your course 5");
+        courses.push(course_1);
+        courses.push(course_2);
+        courses.push(course_3);
+        courses.push(course_4);
+        courses.push(course_5);
+        alert(courses);
+        courses.splice(0,1, prompt(courses[0], courses[0]));
+        courses.splice(1,1, prompt(courses[1], courses[1]));
+        courses.splice(2,1, prompt(courses[2], courses[2]));
+        courses.splice(3,1, prompt(courses[3], courses[3]));
+        courses.splice(4,1, prompt(courses[4], courses[4]));
+        // OR
+        // courses[0] = prompt(courses[0], courses[0]);
+        // courses[1] = prompt(courses[1], courses[1]);
+        // courses[2] = prompt(courses[2], courses[2]);
+        // courses[3] = prompt(courses[3], courses[3]);
+        // courses[4] = prompt(courses[4], courses[4]);
+        alert(courses);
+    </script>
+</head>
+<body>
+</body>
+</html>
